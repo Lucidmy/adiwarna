@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Sifu Details | Adiwarna</title>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --maroon: #8b1532;
+            --white: #ffffff;
+            --grey: #555555;
+            --black: #1a1a1a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            /* Background dengan overlay fade supaya teks jelas */
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.95)), url('./assets/background-hero.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: var(--black);
+            padding-top: 80px;
+        }
+
+        /* --- 1. FLOATING HOME BUTTON (TOP RIGHT) --- */
+        .floating-home {
+            position: fixed;
+            top: 30px;
+            right: 40px;
+            z-index: 10000;
+        }
+
+        .btn-home-fixed {
+            background: var(--maroon);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 20px rgba(139, 21, 50, 0.3);
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-home-fixed:hover {
+            transform: translateY(-3px);
+            background: var(--black);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* --- 2. LAYOUT CONTAINER --- */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--black);
+        }
+
+        /* --- 3. SIFU CARD ROW (CLEAN LOOK) --- */
+        .sifu-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 120px;
+            gap: 60px;
+        }
+
+        /* Gambar di sebelah kiri */
+        .sifu-img {
+            flex: 0 0 320px;
+            height: 420px;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: transform 0.5s ease;
+        }
+
+        .sifu-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .sifu-card:hover .sifu-img {
+            transform: scale(1.02);
+        }
+
+        /* Info di sebelah kanan (Text Align Right) */
+        .sifu-info {
+            flex: 1;
+            text-align: right;
+        }
+
+        .sifu-info h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            line-height: 1.3;
+            color: var(--black);
+            text-transform: uppercase;
+        }
+
+        .sifu-info .id-number {
+            font-size: 1.1rem;
+            color: var(--grey);
+            margin-bottom: 15px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .sifu-info .role {
+            font-size: 1rem;
+            color: var(--maroon);
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-top: 2px solid rgba(139, 21, 50, 0.1);
+            padding-top: 15px;
+            display: inline-block;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 60px 0;
+            opacity: 0.5;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 850px) {
+            .floating-home { top: 20px; right: 20px; }
+            .btn-home-fixed { padding: 10px 20px; font-size: 0.7rem; }
+            .sifu-card { flex-direction: column; text-align: center; gap: 30px; }
+            .sifu-info { text-align: center; }
+            .sifu-img { flex: 0 0 280px; height: 360px; width: 280px; }
+            header h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="floating-home" data-aos="fade-left" data-aos-duration="1000">
+        <a href="index.html" class="btn-home-fixed">HOME</a>
+    </div>
+
+    <div class="container">
+        <header data-aos="fade-down" data-aos-duration="1000">
+            <h1>Meet Our Sifu's</h1>
+        </header>
+
+        <div class="sifu-card" data-aos="fade-up">
+            <div class="sifu-img">
+                <img src="./assets/member1.jpeg" alt="Ardini">
+            </div>
+            <div class="sifu-info">
+                <h2>NUR ARDINI FARIHAH BINTI FAIZAL</h2>
+                <p class="id-number">14DEV24F1047</p>
+                <p class="role">ACTIVITY AND REGISTRATION</p>
+            </div>
+        </div>
+
+        <div class="sifu-card" data-aos="fade-up">
+            <div class="sifu-img">
+                <img src="./assets/member2.jpeg" alt="Zulzaimie">
+            </div>
+            <div class="sifu-info">
+                <h2>ZULZAIMIE HAKIMI BIN IDRIS</h2>
+                <p class="id-number">14DEV24F1055</p>
+                <p class="role">ACTIVITY, MULTIMEDIA AND MARKETING</p>
+            </div>
+        </div>
+
+        <div class="sifu-card" data-aos="fade-up">
+            <div class="sifu-img">
+                <img src="./assets/member3.jpeg" alt="Asymal">
+            </div>
+            <div class="sifu-info">
+                <h2>ASYMAL DANIAL BIN MOHD AZRI</h2>
+                <p class="id-number">14DEV24F1050</p>
+                <p class="role">LOGISTICS AND TECHNICALS</p>
+            </div>
+        </div>
+
+        <div class="sifu-card" data-aos="fade-up">
+            <div class="sifu-img">
+                <img src="./assets/member4.jpeg" alt="Aina">
+            </div>
+            <div class="sifu-info">
+                <h2>AINA FARHANAH SAZLIN BINTI SAZALI</h2>
+                <p class="id-number">14DEV24F1040</p>
+                <p class="role">ACTIVITY, SECRETARY AND REGISTRATION</p>
+            </div>
+        </div>
+
+        <div class="sifu-card" data-aos="fade-up">
+            <div class="sifu-img">
+                <img src="./assets/member5.jpeg" alt="Nabila">
+            </div>
+            <div class="sifu-info">
+                <h2>NABILA FARHANAH BINTI MOHD FARIS</h2>
+                <p class="id-number">14DEV24F1045</p>
+                <p class="role">ACTIVITY AND PROTOCOL</p>
+            </div>
+        </div>
+
+        <footer>
+            © 2026 ADIWARNA MULTIMEDIA COLLECTIVE
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            mirror: false
+        });
+    </script>
+</body>
+</html>
